@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Cliente | ARTEVA</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <img src="imagenes/arteva logo pequeño.png" alt="Logo Arteva" height="50" width="50">
+    <h1>ARTEVA</h1>
+    <nav class="menu-fijo">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="encargos.html">Encargos Personalizados</a></li>
+        <li><a href="cliente.html" class="activo">Área de Cliente</a></li>
+        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero anim-fadein">
+      <h2>Área de Cliente</h2>
+      <p>Aquí puedes ver tus pedidos y descargar tus archivos si ya están listos.</p>
+    </section>
+    <section id="area-cliente" class="anim-fadein">
+      <div class="panel-cliente">
+        <h3>Mis pedidos</h3>
+        <ul>
+          <li>Pedido #1234 - Modelo 3D Listo - <b>Entregado</b> <a href="#" class="descargar">Descargar</a></li>
+          <li>Pedido #1235 - Dibujo en Grafito - <b>En proceso</b></li>
+        </ul>
+        <h3>¿Tienes dudas sobre tu pedido?</h3>
+        <p>Escríbenos desde <a href="contacto.html">contacto</a> o deja un comentario aquí:</p>
+        <form>
+          <input type="text" placeholder="Escribe tu comentario..." style="width:100%;max-width:350px;">
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-info">
+      <p>&copy; 2025 ARTEVA - Todos los derechos reservados</p>
+      <nav class="footer-nav">
+        <a href="aviso-legal.html">Aviso legal</a> |
+        <a href="privacidad.html">Política de privacidad</a> |
+        <a href="accesibilidad.html">Accesibilidad</a>
+      </nav>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><img src="imagenes/instagram.JPG" alt="Instagram" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><img src="imagenes/facebook.JPG" alt="Facebook" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"><img src="imagenes/whatsapp.JPG" alt="WhatsApp" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+      </div>
+    </div>
+    <div class="aviso-cookies" id="aviso-cookies">
+      <p>Este sitio utiliza cookies para mejorar la experiencia de usuario. <button id="aceptar-cookies">Aceptar</button></p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

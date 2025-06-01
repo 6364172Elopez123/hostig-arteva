@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras | ARTEVA</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__content flex-between container">
+      <div class="header__logo-titulo flex gap-2">
+        <img src="imagenes/arteva logo pequeño.png" alt="Logo Arteva">
+        <h1>ARTEVA</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Catálogo</a></li>
+          <li><a href="encargos.html">Encargos Personalizados</a></li>
+          <li><a href="carrito.html" class="activo">Carrito</a></li>
+          <li><a href="sobre.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main container">
+    <section class="section section--hero mb-4">
+      <h2>Carrito de Compras</h2>
+      <p>Aquí puedes ver los productos que agregaste y finalizar tu compra.</p>
+    </section>
+    <section class="section mb-4">
+      <div id="carrito-lista">
+        <p>Tu carrito está vacío.</p>
+      </div>
+      <div class="carrito-resumen" style="display:none;">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="carrito-items"></tbody>
+        </table>
+        <div class="carrito-total">
+          <span>Total: $<span id="carrito-total">0</span></span>
+        </div>
+        <button id="vaciar-carrito" class="btn">Vaciar carrito</button>
+      </div>
+      <div id="paypal-button-container" style="margin-top:20px;"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__info container">
+      <p>&copy; 2025 ARTEVA - Todos los derechos reservados</p>
+      <nav class="footer__nav">
+        <a href="aviso-legal.html">Aviso legal</a> |
+        <a href="privacidad.html">Política de privacidad</a> |
+        <a href="accesibilidad.html">Accesibilidad</a>
+      </nav>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><img src="imagenes/instagram.JPG" alt="Instagram" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><img src="imagenes/facebook.JPG" alt="Facebook" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"><img src="imagenes/whatsapp.JPG" alt="WhatsApp" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+      </div>
+    </div>
+    <div class="aviso-cookies" id="aviso-cookies">
+      <p>Este sitio utiliza cookies para mejorar la experiencia de usuario. <button id="aceptar-cookies">Aceptar</button></p>
+    </div>
+  </footer>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+  <script src="main.js"></script>
+</body>
+</html>

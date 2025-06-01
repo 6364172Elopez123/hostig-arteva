@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesibilidad | ARTEVA</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__content flex-between container">
+      <div class="header__logo-titulo flex gap-2">
+        <img src="imagenes/arteva logo pequeño.png" alt="Logo Arteva">
+        <h1>ARTEVA</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Catálogo</a></li>
+          <li><a href="encargos.html">Encargos Personalizados</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="sobre.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main container">
+    <section class="section section--hero mb-4">
+      <h2>Accesibilidad</h2>
+      <p>En ARTEVA nos comprometemos a que nuestro sitio sea accesible para todas las personas.</p>
+    </section>
+    <section class="section mb-4">
+      <!-- ...contenido de accesibilidad específico... -->
+      <h3>Compromiso</h3>
+      <p>Trabajamos para que la web cumpla los estándares de accesibilidad y sea usable por todos.</p>
+      <h3>Contacto para accesibilidad</h3>
+      <p>Si encuentras alguna barrera, escríbenos y la solucionaremos lo antes posible.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__info container">
+      <p>&copy; 2025 ARTEVA - Todos los derechos reservados</p>
+      <nav class="footer__nav">
+        <a href="aviso-legal.html">Aviso legal</a> |
+        <a href="privacidad.html">Política de privacidad</a> |
+        <a href="accesibilidad.html">Accesibilidad</a>
+      </nav>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><img src="imagenes/instagram.JPG" alt="Instagram" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><img src="imagenes/facebook.JPG" alt="Facebook" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"><img src="imagenes/whatsapp.JPG" alt="WhatsApp" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+      </div>
+    </div>
+    <div class="aviso-cookies" id="aviso-cookies">
+      <p>Este sitio utiliza cookies para mejorar la experiencia de usuario. <button id="aceptar-cookies">Aceptar</button></p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

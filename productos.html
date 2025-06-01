@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo | ARTEVA</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__content flex-between container">
+      <div class="header__logo-titulo flex gap-2">
+        <img src="imagenes/arteva logo pequeño.png" alt="Logo Arteva">
+        <h1>ARTEVA</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html" class="activo">Catálogo</a></li>
+          <li><a href="encargos.html">Encargos Personalizados</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="sobre.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main container">
+    <section class="section section--hero mb-4">
+      <h2>Catálogo de Productos</h2>
+      <p>Aquí puedes ver y comprar nuestros modelos 3D y dibujos en grafito. Haz clic en un producto para agregarlo al carrito.</p>
+    </section>
+    <section class="section section--productos mb-4">
+      <div class="filtros flex gap-1 mb-2">
+        <button data-filtro="todo" class="btn">Todos</button>
+        <button data-filtro="3d-listo" class="btn">Solo 3D</button>
+        <button data-filtro="grafito-listo" class="btn">Solo Grafito</button>
+      </div>
+      <div class="grid-productos">
+        <!-- Producto 1 -->
+        <div class="producto" data-categoria="3d-listo">
+          <img src="imagenes/642da4c4e59e523cb58402724dd2dc33_cjtj83p4msbaul0tlqjg_image.png" alt="Modelo 3D Listo #1" class="visor3d" tabindex="0">
+          <h3>Modelo 3D Listo #1</h3>
+          <p>Modelo para impresión o animación.</p>
+          <span class="precio">$50</span>
+          <button class="agregar-carrito btn">Agregar al carrito</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto" data-categoria="3d-listo">
+          <img src="imagenes/bd266c9b-cf54-4b26-ad5c-98e0f9ed9505.png" alt="Modelo 3D Listo #2" class="visor3d" tabindex="0">
+          <h3>Modelo 3D Listo #2</h3>
+          <p>Modelo digital para tus proyectos.</p>
+          <span class="precio">$65</span>
+          <button class="agregar-carrito btn">Agregar al carrito</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto" data-categoria="grafito-listo">
+          <img src="imagenes/Screenshot_31-5-2025_181215_www.instagram.com.jpeg" alt="Dibujo en Grafito #1" class="zoom-img" tabindex="0">
+          <h3>Dibujo en Grafito #1</h3>
+          <p>Dibujo hecho a mano en papel.</p>
+          <span class="precio">$30</span>
+          <button class="agregar-carrito btn">Agregar al carrito</button>
+        </div>
+        <!-- Producto 4 -->
+        <div class="producto" data-categoria="grafito-listo">
+          <img src="imagenes/Screenshot_31-5-2025_181244_www.instagram.com.jpeg" alt="Dibujo en Grafito #2" class="zoom-img" tabindex="0">
+          <h3>Dibujo en Grafito #2</h3>
+          <p>Arte tradicional, ideal para regalo.</p>
+          <span class="precio">$35</span>
+          <button class="agregar-carrito btn">Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="section section--destacado mt-4">
+        <h3 class="mb-2">¿Quieres algo personalizado?</h3>
+        <p class="mb-2">Pide tu modelo 3D o dibujo en grafito a medida.</p>
+        <a href="encargos.html" class="cta">Ir a encargos personalizados</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__info container">
+      <p>&copy; 2025 ARTEVA - Todos los derechos reservados</p>
+      <nav class="footer__nav">
+        <a href="aviso-legal.html">Aviso legal</a> |
+        <a href="privacidad.html">Política de privacidad</a> |
+        <a href="accesibilidad.html">Accesibilidad</a>
+      </nav>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><img src="imagenes/instagram.JPG" alt="Instagram" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><img src="imagenes/facebook.JPG" alt="Facebook" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"><img src="imagenes/whatsapp.JPG" alt="WhatsApp" height="24" style="height:40px;border-radius:10px;margin-bottom:18px;"></a>
+      </div>
+    </div>
+    <div class="aviso-cookies" id="aviso-cookies">
+      <p>Este sitio utiliza cookies para mejorar la experiencia de usuario. <button id="aceptar-cookies">Aceptar</button></p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

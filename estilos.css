@@ -1,0 +1,297 @@
+/* Import Google Fonts: Montserrat (professional, modern, attractive) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+html, body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  /* Optionally improve font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =============================
+   UTILIDADES GENERALES
+   ============================= */
+/* Contenedor principal para centrar el contenido */
+.container {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 0 16px; /* Espaciado interno */
+}
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Separar elementos */
+}
+.text-center {
+  text-align: center; /* Centrar texto */
+}
+.mt-2 { margin-top: 16px; }
+.mt-4 { margin-top: 32px; }
+/* Margen inferior */
+.mb-2 { margin-bottom: 16px; }
+.mb-4 { margin-bottom: 32px; }
+/* Espaciado entre elementos */
+.gap-1 { gap: 8px; }
+.gap-2 { gap: 16px; }
+.gap-3 { gap: 32px; }
+/* Bordes redondeados */
+.rounded { border-radius: 12px; }
+/* Sombra para dar profundidad */
+.shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+
+/* =============================
+   HEADER Y NAVEGACIÓN
+   ============================= */
+/* Estilo del encabezado */
+.header {
+  background: #fff; /* Fondo blanco */
+  border-bottom: 1px solid #e0e0e0; /* Línea inferior */
+}
+.header__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px; /* Altura mínima */
+}
+.header__logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* Espaciado entre logo y texto */
+}
+.header__logo-titulo img { height: 100px; width: 100px; }
+.header__logo-titulo h1 { margin: 0; color: #8b6844; font-size: 2em; letter-spacing: 2px; }
+
+/* Menú de navegación */
+.nav ul {
+  display: flex;
+  gap: 12px; /* Espaciado entre enlaces */
+  list-style: none; /* Sin viñetas */
+  margin: 0;
+  padding: 0;
+}
+.nav ul li a {
+  color: #222; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px 18px; /* Espaciado interno */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s; /* Animación suave */
+  text-decoration: none; /* Sin subrayado */
+}
+.nav ul li a.activo, .nav ul li a:hover {
+  background: #d4af7f; /* Fondo dorado */
+  color: #fff; /* Texto blanco */
+  box-shadow: 0 2px 8px rgba(180,143,127,0.12); /* Sombra */
+}
+
+/* =============================
+   MAIN Y SECCIONES
+   ============================= */
+/* Estilo general del contenido principal */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px 20px 16px;
+}
+.section {
+  background: #fff; /* Fondo blanco */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Sombra */
+  margin-bottom: 32px; /* Margen inferior */
+  padding: 24px 18px; /* Espaciado interno */
+}
+.section--hero {
+  background: linear-gradient(90deg, #fffbe6 60%, #f7f7f7 100%); /* Fondo degradado */
+  text-align: center; /* Centrar texto */
+}
+.section--productos {
+}
+.section--destacado {
+  background: #fffbe6; /* Fondo amarillo claro */
+  text-align: center; /* Centrar texto */
+}
+
+/* Diseño de cuadrícula para productos */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Ajuste automático */
+  gap: 30px; /* Espaciado entre productos */
+}
+
+/* Imágenes de productos proporcionadas y animadas */
+.grid-productos .producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(180,143,127,0.08);
+  transition: transform 0.3s cubic-bezier(.4,1.3,.5,1), box-shadow 0.3s;
+  background: #f5f5f5;
+  display: block;
+}
+.grid-productos .producto:hover img {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 8px 24px rgba(180,143,127,0.18);
+}
+
+/* Tarjetas de producto más estilizadas */
+.grid-productos .producto {
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(180,143,127,0.10);
+  background: #fff;
+  padding: 18px 14px 22px 14px;
+  margin-bottom: 18px;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-productos .producto:hover {
+  box-shadow: 0 8px 32px rgba(180,143,127,0.18);
+}
+
+/* =============================
+   BOTONES Y CTA
+   ============================= */
+.btn, .cta, button, .agregar-carrito {
+  background: #d4af7f; /* Fondo dorado */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 7px; /* Bordes redondeados */
+  padding: 10px 22px; /* Espaciado interno */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 1em; /* Tamaño de fuente */
+  margin-top: 10px; /* Margen superior */
+  cursor: pointer; /* Cambiar cursor al pasar */
+  box-shadow: 0 1px 4px rgba(180,143,127,0.10); /* Sombra */
+  transition: background 0.3s, transform 0.2s; /* Animación suave */
+}
+.btn:hover, .cta:hover, button:hover, .agregar-carrito:hover {
+  background: #b28e5d; /* Fondo más oscuro */
+  transform: translateY(-2px) scale(1.04); /* Efecto de elevación */
+}
+
+/* =============================
+   FORMULARIOS
+   ============================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+label {
+  font-weight: bold;
+  color: #444;
+}
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* =============================
+   PIE DE PÁGINA Y COOKIES
+   ============================= */
+.footer {
+  background: #fff; /* Fondo blanco */
+  border-top: 1px solid #e0e0e0; /* Línea superior */
+  padding: 18px 0 0 0; /* Espaciado interno */
+  text-align: center; /* Centrar texto */
+}
+.footer__info {
+  margin-bottom: 10px; /* Margen inferior */
+}
+.footer__nav a {
+  color: #b28e5d; /* Color dorado */
+  margin: 0 6px; /* Espaciado entre enlaces */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 0.98em; /* Tamaño de fuente */
+}
+.footer__nav a:hover {
+  text-decoration: underline; /* Subrayado al pasar */
+}
+.redes-sociales a {
+  margin: 0 8px; /* Espaciado entre iconos */
+  display: inline-block; /* Mostrar en línea */
+}
+.aviso-cookies {
+  background: #f7f7f7; /* Fondo gris claro */
+  border-top: 1px solid #e0e0e0; /* Línea superior */
+  padding: 10px 0; /* Espaciado interno */
+  font-size: 0.95em; /* Tamaño de fuente */
+  color: #444; /* Color del texto */
+}
+#aceptar-cookies {
+  background: #d4af7f; /* Fondo dorado */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 6px 16px; /* Espaciado interno */
+  margin-left: 10px; /* Margen izquierdo */
+  cursor: pointer; /* Cambiar cursor al pasar */
+  font-weight: bold; /* Texto en negrita */
+  transition: background 0.3s; /* Animación suave */
+}
+#aceptar-cookies:hover {
+  background: #b28e5d; /* Fondo más oscuro */
+}
+
+/* =============================
+   ACCESIBILIDAD Y RESPONSIVIDAD
+   ============================= */
+:focus {
+  outline: 2px solid #b28e5d;
+  outline-offset: 2px;
+}
+@media (max-width: 900px) {
+  .container, .main {
+    padding: 10px;
+  }
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .header__content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 8px;
+  }
+  .header__logo-titulo {
+    margin-bottom: 8px;
+  }
+  .header__logo-titulo h1 {
+    font-size: 1.3em;
+    margin: 0;
+  }
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 0 0 0;
+  }
+}
+@media (max-width: 600px) {
+  .header__logo-titulo h1 {
+    font-size: 1.5em;
+  }
+  .section, .section--hero, .section--destacado {
+    padding: 12px 4px;
+  }
+}
+@media (min-width: 1300px) {
+  .grid-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

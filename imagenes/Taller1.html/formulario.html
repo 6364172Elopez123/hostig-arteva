@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+</head>
+<body>
+    <FONT>REGITRATE PARA MAS DE ARTE</FONT>
+    <h1>Mi primer formulario</h1>
+    <form action="../Taller1.html/Home.html">
+        <label for="estudiante">Estudiante</label>
+        <label for="muestra">Muestra de los datos ingresados</label><br><br><!--sirve para mostrar algo o para simplemente etiquetar-->
+
+        introduzca su apellido: <input type="text" name="apellido" id="apellido" placeholder="introduzca su primer apellido" required><br><br>
+
+        Introduzca su nombre: <input type="text" name="nombre" id="nombre" placeholder="introuzca su nombre" minlength="3" maxlength="15" required><br><br>
+
+        Introduzca su celular: Indicativo del pais: <input type="number" name="indicativo" id="indicativo" min="1" max="999"> Celular: <input type="text" name=" celular" id="celular" placeholder="introduzca su celular" min="3000000000" max="3999999999"><br><br>
+
+        Introduzca su cedula: <input type="number" name="cedula" id="cedula" placeholder="escribala sin puntos" required min="100000000" max="100000000000" required ><br><br>
+        Digite su email: <input type="email" name="email" id="email" placeholder="intrduzca su email" required><br><br>
+        intrduzca su ocupacion: <input type="text" required><br><br>
+        direccion: <input type="text" required><br><br>
+        intrduzca su contraseña: <input type="password" name="contraseña" id="contraseña" placeholder="intrduzca su contraseña" required><br><br>
+        Mi curso: <input type="text" name="curso" id="curso" readonly placeholder="Programacion Web"><br><br>
+        fecha de nacimiento: <input type="date" id=" fecha" required><br><br>
+        otra fecha: <input type="datetime-local" id=" fecha2" required><br><br>
+        cargar archivo: <input type="file" name="archivo" id="archivo"><br><br>
+        selecciona el color de tu equipo favorito: <input type="color"><br><br>
+        busca el apellido: <input type="search"><br><br>
+        coloca la direccion a buscar: <input type="url"><br><br>
+
+        seleccione la materia que desea aprobar: <select name="Materias" id="select"><br><br>
+            <option value="nada"> --------- </option>
+            <option value="pw"> programacion web </option>
+            <option value="base"> Base de datos </option>
+            <option value="arquitectura"> arquitectura </option>
+
+        </select><br><br>
+        <textarea name="texto" id="txt" rows="10" cols="50">
+
+        </textarea><br><br>
+        <TEXTarea>
+            <BUTTon>ENVIAR FORMULARIO</BUTTon><br><br>
+        </TEXTarea>
+        Tipo de arte que le gusta: <input type="password" required>
+         <input type="submit">
+
+    </form>
+</body>
+</html>

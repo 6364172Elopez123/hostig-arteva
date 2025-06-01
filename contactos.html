@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTEVA</title>
+    <link rel="stylesheet" href="estilos.css">
+  
+  </head>
+  <body>
+    <header>
+      
+      <h1>ARTEVA</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="blogdeartes.html">De que se trata</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+<!-- Formulario de Contacto mejorado -->
+<div class="contact-form">
+  <h2>CONTÁCTANOS:</h2>
+  <p>¿Tienes alguna pregunta o necesitas más información? Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+  <form id="form-contacto" action="https://formspree.io/f/tu_codigo_formspree" method="POST">
+    <label for="nombre-contacto">Nombre:</label>
+    <input type="text" id="nombre-contacto" name="nombre-contacto" required>
+    <label for="email-contacto">Correo electrónico:</label>
+    <input type="email" id="email-contacto" name="email-contacto" required>
+    <label for="mensaje-contacto">Mensaje:</label>
+    <textarea id="mensaje-contacto" name="mensaje-contacto" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="mensaje-contacto"></div>
+</div>
+
+<!-- Formulario avanzado para encargos personalizados -->
+<div class="custom-order-form">
+  <h2>Encargos Personalizados</h2>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+    <label for="description">Descripción del Encargo:</label>
+    <textarea id="description" name="description" rows="5" placeholder="Describe tu encargo..." required></textarea>
+
+    <label for="reference">Subir Archivo de Referencia:</label>
+    <input type="file" id="reference" name="reference" accept="image/*,application/pdf">
+
+    <label for="deadline">Plazo de Entrega:</label>
+    <input type="date" id="deadline" name="deadline" required>
+
+    <button type="submit">Enviar Encargo</button>
+  </form>
+</div>
+
+<!-- Estilos CSS mejorados -->
+<style>
+  .contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  .contact-form p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  .contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+  }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #d4af7f;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .contact-form button:hover {
+    background: #b28e5d;
+  }
+</style>
+
+<!-- Agregar validación en tiempo real al formulario -->
+<script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    if (!name || !email || !phone || !message) {
+      alert('Por favor, completa todos los campos antes de enviar.');
+      event.preventDefault();
+    }
+  });
+</script>
+  
+    </div>
+    <footer>
+      <p>&copy; 2025 ARTEVA - Todos los derechos reservados</p>
+    </footer>
+  </body>
+  </html>
